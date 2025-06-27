@@ -30,7 +30,7 @@ jobs:
 
       - name: Publish to Maven Repository
         if: ${{ success() }}
-        uses: gradle/gradle-build-action@3bfe3a46584a206fb8361cdedd0647b0c4204232
+        uses: gradle/actions/setup-gradle@v3
         env:
           ORG_GRADLE_PROJECT_geysermcUsername: ${{ vars.DEPLOY_USER }}
           ORG_GRADLE_PROJECT_geysermcPassword: ${{ secrets.DEPLOY_PASS }}
